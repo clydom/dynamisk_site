@@ -134,7 +134,7 @@ main p {
 
 .category_list_container {
   display: grid;
-  grid-template-columns: 300px 300px;
+  grid-template-columns: 300px 300px 300px;
   gap: 2rem;
   justify-content: center;
   margin-top: 150px;
