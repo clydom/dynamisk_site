@@ -1,6 +1,10 @@
 "use strict";
 
-const productURL = "https://kea-alt-del.dk/t7/api/products";
+const params = new URLSearchParams(window.location.search);
+const selectedCategory = params.get("category");
+console.log("selectedCategory", selectedCategory);
+
+const productURL = `https://kea-alt-del.dk/t7/api/products?category=${selectedCategory}`;
 
 const listContainer = document.querySelector(".product_list_container");
 
@@ -34,7 +38,7 @@ function showProducts(products) {
 
         </div>
 
-        <p><a href="produkt.html?id=1163">Read More</a></p>
+        <p><a href="detailview.html?id=${product.id}">Read More</a></p>
 
         <p class="soldout_tag">Sold Out</p>
 
